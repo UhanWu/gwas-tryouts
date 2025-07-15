@@ -74,7 +74,6 @@ for (j in 1:ncol(GenoC)) {
     GenoC[, j] <- ifelse(is.na(GenoC[, j]), mean(GenoC[, j], na.rm = TRUE), GenoC[, j])
 }
 
-as.data.frame(GenoC)
 ```
 
 ## Filtering for minor alleles
@@ -179,38 +178,38 @@ GWAS <- GWAS(pheno_final, geno_final, min.MAF = 0.05, P3D = TRUE, plot = FALSE)
 
 ```{r}
 # Read the genotypic file and create a matrix for each chromosome
-corr.matrix1 <- cor(Geno1[, 1:5888])
-corr.matrix2 <- cor(Geno1[, 5889:9439])
-corr.matrix3 <- cor(Geno1[, 9440:13464])
-corr.matrix4 <- cor(Geno1[, 13465:16091])
-corr.matrix5 <- cor(Geno1[, 16092:18701])
-corr.matrix6 <- cor(Geno1[, 18702:21660])
-corr.matrix7 <- cor(Geno1[, 21661:23587])
-corr.matrix8 <- cor(Geno1[, 23588:25668])
-corr.matrix9 <- cor(Geno1[, 25669:27501])
-corr.matrix10 <- cor(Geno1[, 27502:29121])
-corr.matrix11 <- cor(Geno1[, 29122:31752])
-corr.matrix12 <- cor(Geno1[, 31753:33719])
+# corr.matrix1 <- cor(Geno1[, 1:5888])
+# corr.matrix2 <- cor(Geno1[, 5889:9439])
+# corr.matrix3 <- cor(Geno1[, 9440:13464])
+# corr.matrix4 <- cor(Geno1[, 13465:16091])
+# corr.matrix5 <- cor(Geno1[, 16092:18701])
+# corr.matrix6 <- cor(Geno1[, 18702:21660])
+# corr.matrix7 <- cor(Geno1[, 21661:23587])
+# corr.matrix8 <- cor(Geno1[, 23588:25668])
+# corr.matrix9 <- cor(Geno1[, 25669:27501])
+# corr.matrix10 <- cor(Geno1[, 27502:29121])
+# corr.matrix11 <- cor(Geno1[, 29122:31752])
+# corr.matrix12 <- cor(Geno1[, 31753:33719])
 # Now use the meff function from pacakge to get effective number of tests
 # for each chromosome
-meff_liji_1 <- meff(corr.matrix1, method = "liji")
-meff_liji_2 <- meff(corr.matrix2, method = "liji")
-meff_liji_3 <- meff(corr.matrix3, method = "liji")
-meff_liji_4 <- meff(corr.matrix4, method = "liji")
-meff_liji_5 <- meff(corr.matrix5, method = "liji")
-meff_liji_6 <- meff(corr.matrix6, method = "liji")
-meff_liji_7 <- meff(corr.matrix7, method = "liji")
-meff_liji_8 <- meff(corr.matrix8, method = "liji")
-meff_liji_9 <- meff(corr.matrix9, method = "liji")
-meff_liji_10 <- meff(corr.matrix10, method = "liji")
-meff_liji_11 <- meff(corr.matrix11, method = "liji")
-meff_liji_12 <- meff(corr.matrix12, method = "liji")
+# meff_liji_1 <- meff(corr.matrix1, method = "liji")
+# meff_liji_2 <- meff(corr.matrix2, method = "liji")
+# meff_liji_3 <- meff(corr.matrix3, method = "liji")
+# meff_liji_4 <- meff(corr.matrix4, method = "liji")
+# meff_liji_5 <- meff(corr.matrix5, method = "liji")
+# meff_liji_6 <- meff(corr.matrix6, method = "liji")
+# meff_liji_7 <- meff(corr.matrix7, method = "liji")
+# meff_liji_8 <- meff(corr.matrix8, method = "liji")
+# meff_liji_9 <- meff(corr.matrix9, method = "liji")
+# meff_liji_10 <- meff(corr.matrix10, method = "liji")
+# meff_liji_11 <- meff(corr.matrix11, method = "liji")
+# meff_liji_12 <- meff(corr.matrix12, method = "liji")
 
 # Now sum up all the effective tests to get effective number of independent
 # tests
-Meff <- sum(meff_liji_1, meff_liji_2, meff_liji_3, meff_liji_4, meff_liji_5, 
-    meff_liji_6, meff_liji_7, meff_liji_8, meff_liji_9, meff_liji_10, meff_liji_11, 
-    meff_liji_12)
+# Meff <- sum(meff_liji_1, meff_liji_2, meff_liji_3, meff_liji_4, meff_liji_5, 
+#     meff_liji_6, meff_liji_7, meff_liji_8, meff_liji_9, meff_liji_10, meff_liji_11, 
+#     meff_liji_12)
 ```
 
 ```{r}
