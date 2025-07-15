@@ -1,6 +1,6 @@
-# gwas-tryouts
+# GWAS Tryouts
 
-This repository, **gwas-tryouts**, serves as a practical learning experience in Genome-Wide Association Studies (GWAS).
+This repository, **gwas-tryouts**, serves as my practical learning experience in Genome-Wide Association Studies (GWAS).
 ---
 
 ## gwas-rice
