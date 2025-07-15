@@ -51,7 +51,10 @@ table(rownames(Geno) == rownames(y))
 
 ############################ Quality Control check of Marker Data
 
-
+for (j in 1:ncol(Geno)) {
+  Geno[, j] <- ifelse(is.na(Geno[, j]), mean(Geno[, j], na.rm = TRUE), Geno[, 
+                                                                            j])
+}
 
 
 
