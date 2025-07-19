@@ -1,0 +1,22 @@
+---
+title: "gwas-maize"
+author: "Yuhan"
+date: "2025-07-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(data.table)
+library(tidyverse)
+
+```
+
+```{r}
+snps = fread("genotypic_and_phenotypic_data/subset_widiv_942g_899784SNPs_imputed_filteredGenos_noRTA_AGPv4.hmp.txt")
+
+snps_in_genes = fread("genotypic_and_phenotypic_data/subset_widiv_942g_899784SNPs_imputed_filteredGenos_noRTA_AGPv4.hmp.txt")
+p1_snps = snps_in_genes[snps_in_genes$gene=="Zm00001d028854",]
+```
+
