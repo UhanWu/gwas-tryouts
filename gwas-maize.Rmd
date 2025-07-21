@@ -13,6 +13,8 @@ library(tidyverse)
 
 ```
 
+
+
 ```{r}
 snps = fread("genotypic_and_phenotypic_data/subset_widiv_942g_899784SNPs_imputed_filteredGenos_noRTA_AGPv4.hmp.txt")
 
